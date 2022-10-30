@@ -1,0 +1,44 @@
+@use "~@topicus-rgp-ds/interactables/theme/ds-interactables-theme";
+
+/* DashboardComponent's private CSS styles */
+
+h2 {
+  text-align: center;
+  font-size: 150%;
+  margin: 1rem;
+}
+
+.heroes-menu {
+  padding: 0;
+  margin: auto;
+  max-width: 750px;
+
+  /* flexbox */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+
+button {
+  width: 100%;
+  max-width: 100px;
+
+  /* flexbox */
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+}
+
+@media (min-width: 600px) {
+  a {
+    width: 18%;
+    box-sizing: content-box;
+  }
+}
+
+a:hover {
+  background-color: #000;
+}

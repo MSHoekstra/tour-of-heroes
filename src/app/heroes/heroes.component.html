@@ -1,11 +1,23 @@
 <h2>My Heroes</h2>
 <ul class="heroes">
   <li *ngFor="let hero of heroes">
-    <button [class.selected]="hero === selectedHero" type="button" (click)="onSelect(hero)">
-      <span class="badge">{{hero.id}}</span>
-      <span class="name">{{hero.name}}</span>
+    <button ds-button-primary class="detailButton" [routerLink]="['/detail', hero.id]">
+      <span class="name">{{hero.id}}</span>  {{hero.name}}
     </button>
+    <button ds-button-delete-primary class="delete" title="delete hero"
+      (click)="delete(hero)">x</button>
+
   </li>
 </ul>
 
-<app-hero-detail [hero]="selectedHero"></app-hero-detail>
+<div>
+  <ds-input
+    #heroName
+    label="Add new Hero!"
+    placeholder="Enter the hero's name here">
+    <ng-template dsCallToAction>
+      <button ds-button-primary (click)="add(heroName.value); heroName.value=''">Add hero</button>
+    </ng-template>
+  </ds-input>
+
+</div>

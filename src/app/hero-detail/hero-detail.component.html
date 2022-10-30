@@ -2,7 +2,11 @@
   <h2>{{hero.name | uppercase}}</h2>
   <div><span>id: </span>{{hero.id}}</div>
   <div>
-    <label for="hero-name">Hero name: </label>
-    <input id="hero-name" [(ngModel)]="hero.name" placeholder="name">
+    <ds-input
+      label="Hero name:"
+      placeholder="name"
+      [(ngModel)]="hero.name"></ds-input>
   </div>
+  <button ds-button-primary (click)="goBack()">go back</button>
+  <button ds-button-primary (click)="save()">save</button>
 </div>

@@ -1,0 +1,9 @@
+<div id="search-component">
+  <ds-input #searchBox label="Hero Search" (input)="search(searchBox.value)" placeholder="Type a hero's name"></ds-input>
+
+  <ul class="search-result">
+    <li *ngFor="let hero of heroes$ | async" >
+      <button ds-button-secondary [routerLink]="['/detail', hero.id]">{{hero.name}} </button>
+    </li>
+  </ul>
+</div>
