@@ -1,4 +1,4 @@
-@use "~@topicus-rgp-ds/interactables/theme/ds-interactables-theme";
+
 
 /* HeroesComponent's private CSS styles */
 h2 {
@@ -73,7 +73,7 @@ button {
 button.delete {
   position: absolute;
   left: 250px;
-  top: 0px;
+  top: 0;
   color:  #525252;
   font-size: 1.1rem;
   margin: 0;
